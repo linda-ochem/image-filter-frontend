@@ -15,21 +15,21 @@
     <title>Image App</title>
     <style>
       body{
-        background-color: rgb(230, 206, 52);
+        background-color: rgb(239, 236, 220);
       }
       .row{
-        background-color: rgb(138, 123, 27);
-        border: 1px solid rgb(230, 206, 52);
+        background-color: rgb(108, 96, 19);
+        border: 1px solid rgb(239, 236, 220);
         color: white;
       }
       .btn{
-        background-color: rgb(138, 123, 27);
-        border: 1px solid rgb(230, 206, 52);
+        background-color: rgb(108, 96, 19);
+        border: 1px solid rgb(239, 236, 220);
       }
       .btn:hover{
         background-color: whitesmoke;
         color: black;
-        border: 1px solid  rgb(138, 123, 27)
+        border: 1px solid  rgb(108, 96, 19)
       }
       #resImage{
         margin: 80px;
@@ -39,7 +39,7 @@
 </head>
 <body>
       
-  <form class="container my-5">
+  <form class="container-fluid my-5 justify-content-center mx-2">
     <div class="row mb-3 form-control form-control-md py-5">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Enter Image Address</label>
       <div class="col-sm-10">
@@ -55,11 +55,12 @@
     </div>
 
     <div class="d-grid gap-2 col-4 mx-auto">
-      <button class="btn btn-primary" type="submit">click me!</button>
+      <button class="btn btn-primary" type="submit">Get Image</button>
     </div>
+    <div id="resImage" class="mx-3"><img src="" alt="" srcset=""></div>
   </form>
 
-  <div id="resImage"><img src="" alt="" srcset=""></div>
+  
   <script src="/app.js"></script>
 </body>
 </html>
