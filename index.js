@@ -9,8 +9,8 @@ let Path = require('path')
 let app = express()
 const PORT = 8080
 
-app.set('view engine', 'ejs')
-app.set('views', Path.join(__dirname, '/views'))
+// app.set('view engine', 'ejs')
+// app.set('views', Path.join(__dirname, '/views'))
 // app.use(express.static(Path.join(__dirname,'/public')))
 
 
@@ -21,7 +21,7 @@ app.set('views', Path.join(__dirname, '/views'))
  
 
 app.get('/', (req,res)=>{
-  res.render('index')
+  res.render('index.ejs')
 })
 
 
