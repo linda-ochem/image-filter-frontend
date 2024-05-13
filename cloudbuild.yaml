@@ -3,7 +3,7 @@
       args: [ 'build', '-t', 'gcr.io/development-422509/test-image', '.' ]
     # logsBucket: 'ochem-test-bucket'
     options:
-      logging: GCS_ONLY
+      logging: ochem-test-bucket
 
 
 
