@@ -13,7 +13,7 @@ steps:
 
 
 options:
-  logging: CLOUD_LOGGING_ONLY # Specify the logging option here
+  logging: CLOUD_LOGGING_ONLY # Specify the logging option 
 
 
 
