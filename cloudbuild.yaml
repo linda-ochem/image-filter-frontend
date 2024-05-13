@@ -1,7 +1,19 @@
 steps:
-  # Your build steps here
+  # Install dependencies and build the application
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+
+  # Deploy the application to Google App Engine
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'app'
+      - 'deploy'
+      - 'app.yaml' # Replace with your app.yaml configuration file path
+    timeout: '1600s' # Adjust timeout if needed
 
 options:
   logging: CLOUD_LOGGING_ONLY
   build:
-    logsBucket: ochem-test-bucket
+    logsBucket: ochem-test-bucket # Replace with your Cloud Storage bucket name
