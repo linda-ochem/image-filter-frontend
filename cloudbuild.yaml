@@ -1,9 +1,7 @@
-    steps:
-    - name: 'gcr.io/cloud-builders/docker'
-      args: [ 'build', '-t', 'gcr.io/development-422509/test-image', '.' ]
-    # logsBucket: 'ochem-test-bucket'
-    options:
-      logging: ochem-test-bucket
+steps:
+  # Your build steps here
 
-
-
+options:
+  logging: CLOUD_LOGGING_ONLY
+  build:
+    logsBucket: ochem-test-bucket
