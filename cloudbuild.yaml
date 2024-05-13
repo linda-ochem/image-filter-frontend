@@ -12,9 +12,11 @@ steps:
   args: ['run', 'deploy', '${_SERVICE_NAME}', '--image', 'gcr.io/$PROJECT_ID/${_SERVICE_NAME}:${SHORT_SHA}', '--region', 'us-central1', '--platform', 'managed', "--allow-unauthenticated"] 
  
 
-logging:
-  - 'CLOUD_LOGGING_ONLY'
-  - 'logsBucket: ochem-test-bucket'
+gcloud builds triggers create push-trigger \
+    --trigger-config=cloudbuild.yaml \
+    --logging=LOGGING_OPTION \
+    --log-storage=gs://ochem-test-bucket
+
 
 
 
