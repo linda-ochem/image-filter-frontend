@@ -14,8 +14,7 @@ steps:
 
 options:
   logging: CLOUD_LOGGING_ONLY # Specify the logging option here
-  build:
-    logsBucket: ochem-test-bucket # Specify your logs bucket here
+
 
 
 
