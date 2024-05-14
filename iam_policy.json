@@ -1,0 +1,15 @@
+{
+    "bindings": [
+      {
+        "role": "roles/run.admin",
+        "members": [
+          "serviceAccount:dev-service-account@development-422509.iam.gserviceaccount.com"
+        ],
+        "condition": {
+          "expression": "request.time < timestamp(\"2024-05-13T11:38:39.078Z\")",
+          "title": "cloudbuild-connection-setup"
+        }
+      }
+    ]
+  }
+  
